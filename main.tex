@@ -1,0 +1,80 @@
+\documentclass[12pt]{report}
+\renewcommand{\baselinestretch}{}
+\usepackage[utf8]{inputenc}
+\usepackage{times}
+\usepackage{setspace}
+\usepackage[semicolon]{natbib}
+\usepackage[colorlinks,citecolor=blue,bookmarks=false,hypertexnames=true]{hyperref}
+\title{major}
+\author{tp}
+\date{May 2021}
+
+% Use package below to change margins 
+\usepackage{graphicx}
+\usepackage[a4paper,top=25mm,bottom=25mm,left=25mm,right=25mm]{geometry}
+% text color package
+\usepackage[dvipsnames]{xcolor}
+\usepackage{booktabs}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage[table,xcdraw]{xcolor}
+\usepackage{tocloft}
+\renewcommand{\cfttoctitlefont}{\hspace*{\fill}\Large\bfseries}
+\renewcommand{\cftaftertoctitle}{\hspace*{\fill}}
+\renewcommand{\cftlottitlefont}{\hspace*{\fill}\Large\bfseries}
+\renewcommand{\cftafterlottitle}{\hspace*{\fill}}
+\renewcommand{\cftloftitlefont}{\hspace*{\fill}\Large\bfseries}
+\renewcommand{\cftafterloftitle}{\hspace*{\fill}}
+
+\usepackage{sectsty}
+\chapternumberfont{\Large} 
+\chaptertitlefont{\Large}
+
+
+\pagenumbering{roman}
+
+% document begins here
+\begin{document}
+
+\input{Header/titlepage}
+\newpage
+
+\input{Header/certificate}
+\addcontentsline{toc}{chapter}{Certificate}
+\newpage
+\input{Header/declaration}
+\addcontentsline{toc}{chapter}{Declaration}
+\newpage
+\input{Header/dedication}
+\addcontentsline{toc}{chapter}{Dedication}
+\newpage
+\input{Header/ackment}
+\addcontentsline{toc}{chapter}{Acknowledgement}
+\newpage
+\input{Header/abstract}
+\addcontentsline{toc}{chapter}{Abstract}
+\newpage
+
+\setcounter{tocdepth}{2}
+\tableofcontents
+\addcontentsline{toc}{chapter}{Content}
+\newpage
+
+
+%CHAPTERS BEGIN
+\pagenumbering{arabic}
+\input{Chapters/Intro}
+
+
+\input{Chapters/Savings Investment Nexus}
+\input{Chapters/Shift_in_growth}
+\input{Chapters/Endowments and growth} 
+\input{Chapters/Cultural Changes}
+\input{Chapters/Politics_of_incetivisation}
+\input{Chapters/Conclusion}
+
+\bibliographystyle{apalike}
+\bibliography{references}
+
+
+\end{document}
